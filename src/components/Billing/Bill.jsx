@@ -11,7 +11,7 @@ const Bill=(props)=>{
     const [hash2,setHash]=useState("")
     const [data,setData]=useState({
         StoreName:"",
-        Hash:"",
+        Hash:"Not available as IPFS is not running",
         DOM:"",
         LTS:"",
         PManufacture:"",
@@ -85,6 +85,11 @@ const Bill=(props)=>{
         window.alert("Check whether IPFS server is running or not")
     }
         try{
+            setData((prev)=>{
+                return {
+                    ...prev,
+                    Invoice:inv(),
+                }})
         const res=await fetch("https://block-pe-backend.herokuapp.com/purchase",{
             method:"POST",
             headers:{
