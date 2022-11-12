@@ -166,7 +166,7 @@ const Bill=(props)=>{
             </div>
             <div>
                 <input type="text" onChange={inputEvent}placeholder="Enter Store Name" name="StoreName" value={data.StoreName}></input>
-                <input type="text" onChange={inputEvent}placeholder="Enter MI Store ID"name="MIStoreID" value={data.MIStoreID}></input>
+                <input type="text" onChange={inputEvent}placeholder="Enter  Store ID"name="MIStoreID" value={data.MIStoreID}></input>
                 </div>
                 <div>
                 <input type="text" onChange={inputEvent}placeholder="Enter Product Category" name="PCategory" value={data.PCategory}></input>

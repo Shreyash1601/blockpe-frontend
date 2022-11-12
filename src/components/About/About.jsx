@@ -10,7 +10,7 @@ return(
     <h1>Block Pe: Billing & Asset Tracking Application</h1>
     <Button1/>
     <div className='matter'>
-    <p><b>Block Pe</b> is a Billing & Asset Tracking Application which is designed to ease the Billing process of Xiaomi products at Xiomi retail outlets.
+    <p><b>Block Pe</b> is a Billing & Asset Tracking Application which is designed to ease the Billing process of electronic products at retail outlets.
     <br/>
     <br/>
 

@@ -55,11 +55,11 @@ const Login=()=>{
   return(
     <>
     <div class="Card">
-    <div class="head">Login using MI ID and password
+    <div class="head">Login using Store ID and password
     </div>
     <form onSubmit={onSubmits}>
     <div class="formi">
-        <input type="text" class="entry" placeholder="Enter your unique MI Store ID" name="MI" onChange={inputEvent} value={data.MI}/>
+        <input type="text" class="entry" placeholder="Enter your unique Store ID" name="MI" onChange={inputEvent} value={data.MI}/>
 
         <input type="text" class="entry" placeholder="Enter your password" name="pass" onChange={inputEvent} value={data.pass}/>
         <button type="submit" class="Login" onClick={onSubmits}>Log In</button>
