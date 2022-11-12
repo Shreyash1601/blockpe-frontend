@@ -77,11 +77,11 @@ const Bill=(props)=>{
             setData((prev)=>{
                 return {
                     ...prev,
-                    Hash:result2.CID,
+                    Hash:hash2,
                     Invoice:inv(),
                 }})
         window.alert(`Successfully added to IPFS!!\n
-        Hash:-${result2.CID}
+        Hash:-${hash2}
         Kindly copy this Hash ID for reference`);
         }
     }catch(err){
@@ -91,6 +91,7 @@ const Bill=(props)=>{
             setData((prev)=>{
                 return {
                     ...prev,
+                    Hash:hash2,
                     Invoice:inv(),
                 }})
         const res=await fetch("https://block-pe-backend.herokuapp.com/purchase",{
