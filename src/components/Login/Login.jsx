@@ -29,7 +29,7 @@ const Login=()=>{
     const onSubmits=async (event)=>{
         event.preventDefault();
         setFlag(!flag)
-        const res=await fetch("https://block-pe-backend.herokuapp.com/Login",{
+        const res=await fetch("https://blockpebackend.herokuapp.com/Login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

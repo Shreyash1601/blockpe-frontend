@@ -30,7 +30,7 @@ const Resell=()=>{
         data2.append('OPrice',Number(data.OPrice))
         data2.append('YOM',Number(data.YOM))
         try{
-            const res=await fetch("https://block-pe-predict.herokuapp.com/predict",{
+            const res=await fetch("https://blockpebackend.herokuapp.com/predict",{
                 method:"POST",
                 body:data2
               })

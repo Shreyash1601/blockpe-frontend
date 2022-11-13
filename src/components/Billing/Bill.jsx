@@ -10,8 +10,8 @@ const Bill=(props)=>{
     const [flag2,setFlag2]=useState(false)
     const [flag1,setFlag1]=useState(true)
     const [QR,setQR]=useState(true)
-    const [hash2,setHash]=useState("")
-    const [data,setData]=useState({
+    var [hash2,setHash]=useState()
+    var [data,setData]=useState({
         StoreName:"",
         Hash:"Not available as IPFS is not running",
         DOM:"",
@@ -46,9 +46,9 @@ const Bill=(props)=>{
         }
         setData((prev)=>{
             return {
-                Invoice:inv(),
                 ...prev,
-                [name]:val
+                [name]:val,
+                Invoice:inv()
             }
            
         })
@@ -66,35 +66,36 @@ const Bill=(props)=>{
             },
             body:JSON.stringify(data)
         })
-        const result2=await res2.json();
+        var result2=await res2.json();
 
         if(res2.status>=400 ||!result2){
             window.alert("Error occurred at IPFS server")
         }
         else{
             console.log(result2.CID)
-            setHash(result2.CID)
+            setHash(result2.CID.toString())
             setData((prev)=>{
                 return {
                     ...prev,
-                    Hash:hash2,
                     Invoice:inv(),
+                    Hash:result2.CID.toString()
                 }})
         window.alert(`Successfully added to IPFS!!\n
-        Hash:-${hash2}
+        Hash:-${result2.CID}
         Kindly copy this Hash ID for reference`);
         }
     }catch(err){
         window.alert("Check whether IPFS server is running or not")
     }
         try{
+            window.alert(`hash${result2.CID}`)
             setData((prev)=>{
                 return {
-                    ...prev,
-                    Hash:hash2,
                     Invoice:inv(),
+                    Hash:result2.CID.toString(),
+                    ...prev,
                 }})
-        const res=await fetch("https://block-pe-backend.herokuapp.com/purchase",{
+        const res=await fetch("https://blockpebackend.herokuapp.com/purchase",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

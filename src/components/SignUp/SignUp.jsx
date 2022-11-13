@@ -32,7 +32,7 @@ const SignUp=()=>{
             window.alert("password and confirm password are not matching")
         }
         else{
-        const res=await fetch("https://block-pe-backend.herokuapp.com/register",{
+        const res=await fetch("https://blockpebackend.herokuapp.com/register",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
