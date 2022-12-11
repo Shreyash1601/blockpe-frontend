@@ -15,7 +15,7 @@ const Records=()=>{
     }
     const displayAll=async ()=>{
         if(!flag) setFlag(!flag)
-        const res=await fetch(`https://blockpebackend.herokuapp.com/records/all`,{
+        const res=await fetch(`https://block-pe-backend.onrender.com/records/all`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

@@ -95,7 +95,7 @@ const Bill=(props)=>{
                     Hash:result2.CID.toString(),
                     ...prev,
                 }})
-        const res=await fetch("https://blockpebackend.herokuapp.com/purchase",{
+        const res=await fetch("https://block-pe-backend.onrender.com/purchase",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
