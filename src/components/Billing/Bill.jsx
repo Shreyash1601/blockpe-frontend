@@ -58,7 +58,7 @@ const Bill=(props)=>{
         event.preventDefault();
         if(!flag2) setFlag2(!flag2)
         try{
-        const res2=await fetch("https://block-pe-ipfs.herokuapp.com/ipfs",{
+        const res2=await fetch("https://ipfs-x6nv.onrender.com/ipfs",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
